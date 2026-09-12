@@ -17,12 +17,19 @@
         <p><b>From: </b><i><%= chat.from %></i></p>
         <div class="msg">
           <p><%= chat.msg %></p>
+          <form method="get" action="/chats/<%= chat.id %>/edit">
+            <button>Edit</button>
+          </form>
         </div>
         <p><b>Recieved by</b> <i><%= chat.to %></i></p>
         <p><b>Time: </b><%= chat.created_at.toString().split(" ")[4] %></p>
         <p><b>Date: </b><%= chat.created_at.toString().split(" ").slice(0,4).join("-") %></p>
+        <form method="post" action="/chats/<%= chat.id %>?_method=DELETE">
+          <button class="del">Delete</button>
+        </form>
       </div>
       <% } %>
     </div>  
+    <script src="/JS/script.js"></script>
   </body>
 </html>
