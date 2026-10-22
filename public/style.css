@@ -48,7 +48,7 @@ button {
 
 .del{
   background-color: red;
-  border: 2px solid rgb(58, 22, 22);
+  border: solid rgb(240, 6, 6);
 }
 
 button:hover{
